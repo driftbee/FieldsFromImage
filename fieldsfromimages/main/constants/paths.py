@@ -1,3 +1,4 @@
+#!/usr/bin/python
 class LocalPaths(object):
     def __init__(self, input_dir,
                  output_dir,

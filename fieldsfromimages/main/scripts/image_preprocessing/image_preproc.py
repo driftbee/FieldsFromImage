@@ -1,8 +1,9 @@
+#!/usr/bin/python
 from fieldsfromimages.main.utilities.image_processing_tools import *
 from fieldsfromimages.main.constants.paths import LocalPaths
 
-if __name__ == '__main__':
 
+def main():
     local_paths = LocalPaths(input_dir='/home/dionysis/Documents/image_test',
                              input_file_name='itinerary.png',
                              output_dir='/home/dionysis/Documents/output_image_test',
