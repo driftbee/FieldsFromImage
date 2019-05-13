@@ -1,4 +1,5 @@
 #!/usr/bin/python
+from fieldsfromimages.main.utilities.generic_tools import *
 from fieldsfromimages.main.utilities.image_processing_tools import *
 from fieldsfromimages.main.constants.paths import LocalPaths
 
