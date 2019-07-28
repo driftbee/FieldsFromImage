@@ -1,8 +1,18 @@
 #!/usr/bin/python
-from fieldsfromimages.main.scripts.image_preprocessing import image_preproc
-from fieldsfromimages.main.scripts.field_extractor import get_n_preproc_date
+from fieldsfromimages.main import pipeline
+from fieldsfromimages.main import cleanup
+from fieldsfromimages.main.constants.paths import LocalPaths
 
 if __name__ == '__main__':
-    #image_preproc.main()
-    get_n_preproc_date.main()
+    local_paths = LocalPaths(input_dir='/home/dionysis/Documents/image_test',
+                             input_file_name='itinerary.png',
+                             output_dir='/home/dionysis/Documents/output_image_test',
+                             output_file_name='itinerary_',
+                             output_txt_file_name='itinerary_txt_',
+                             keep_intermediate_data=True)
 
+    try:
+        pipeline.main(local_paths)
+        cleanup.main(local_paths)
+    except:
+        cleanup.main(local_paths)

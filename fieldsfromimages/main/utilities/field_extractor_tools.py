@@ -1,4 +1,5 @@
 from fieldsfromimages.main.utilities.generic_tools import *
+from geotext import GeoText
 import datefinder
 
 def text_reader(text_path):
@@ -11,4 +12,9 @@ def text_reader(text_path):
 def get_dates(text):
     matches = datefinder.find_dates(text)
     return matches
+
+
+def get_cities(text):
+    places = GeoText(text)
+    return places.cities
 

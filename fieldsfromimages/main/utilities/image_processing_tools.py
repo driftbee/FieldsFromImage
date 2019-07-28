@@ -2,6 +2,7 @@
 import os
 import cv2
 import numpy as np
+from fieldsfromimages.main.constants.removables import removable_files
 
 
 def image_reader(img_path):
@@ -75,4 +76,5 @@ def save_image(cv_img, dir, file_name):
         '_preproced'
         '.jpg')
     print('Saving image to ' + save_path)
+    removable_files.append(save_path)
     cv2.imwrite(save_path, cv_img)
