@@ -1,7 +1,7 @@
 #!/usr/bin/python
-from fieldsfromimages.main import pipeline
-from fieldsfromimages.main import cleanup
-from fieldsfromimages.main.constants.paths import LocalPaths
+from fieldsfromimages import main
+from fieldsfromimages import cleanup
+from fieldsfromimages.constants.paths import LocalPaths
 
 if __name__ == '__main__':
     local_paths = LocalPaths(input_dir='/home/dionysis/Documents/image_test',
@@ -12,7 +12,7 @@ if __name__ == '__main__':
                              keep_intermediate_data=True)
 
     try:
-        pipeline.main(local_paths)
+        main.main(local_paths)
         cleanup.main(local_paths)
     except:
         cleanup.main(local_paths)
