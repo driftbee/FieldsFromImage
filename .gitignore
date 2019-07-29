@@ -3,3 +3,5 @@ venv
 dist
 build
 fields_from_images.egg-info
+output
+__pycache__

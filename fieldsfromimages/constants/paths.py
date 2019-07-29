@@ -7,6 +7,7 @@ class LocalPaths(object):
                  output_dir,
                  input_file_name,
                  output_file_name,
+                 output_txt_file_dir,
                  output_txt_file_name,
                  keep_intermediate_data):
         self.dt = datetime.datetime.now()
@@ -16,6 +17,8 @@ class LocalPaths(object):
         self.output_dir = output_dir
 
         self.input_file_name = input_file_name
+
+        self.output_txt_file_dir = output_txt_file_dir
 
         self.output_file_name = output_file_name + str(self.dt)
 
