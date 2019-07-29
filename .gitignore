@@ -1,2 +1,5 @@
 .idea
 venv
+dist
+build
+fields_from_images.egg-info
